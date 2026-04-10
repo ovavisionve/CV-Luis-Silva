@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Ilarraza — Portfolio</title>
+  <meta name="description" content="Portfolio profesional de Luis Ilarraza. Especialista en automatización con IA y gestión de proyectos digitales.">
+  <meta property="og:title" content="Luis Ilarraza — Portfolio">
+  <meta property="og:description" content="Automatización con IA + Gestión de Proyectos Digitales">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="pm">
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">Luis Ilarraza</a>
+
+      <nav class="header__nav" id="nav">
+        <!-- PM Nav -->
+        <ul class="nav__list nav__list--pm">
+          <li><a href="#hero" class="nav__link">Inicio</a></li>
+          <li><a href="#about" class="nav__link">Sobre Mí</a></li>
+          <li><a href="#experience" class="nav__link">Experiencia</a></li>
+          <li><a href="#education" class="nav__link">Educación</a></li>
+          <li><a href="#contact" class="nav__link">Contacto</a></li>
+        </ul>
+        <!-- Dev Nav -->
+        <ul class="nav__list nav__list--dev">
+          <li><a href="#hero" class="nav__link">Inicio</a></li>
+          <li><a href="#about" class="nav__link">Sobre Mí</a></li>
+          <li><a href="#projects" class="nav__link">Proyectos</a></li>
+          <li><a href="#education" class="nav__link">Educación</a></li>
+          <li><a href="#contact" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <!-- Toggle de modo -->
+        <div class="mode-toggle" id="modeToggle">
+          <span class="mode-toggle__label mode-toggle__label--pm">
+            <i class="fas fa-chart-bar"></i> PM
+          </span>
+          <button class="mode-toggle__switch" id="toggleSwitch" aria-label="Cambiar entre modo Project Manager y Developer">
+            <span class="mode-toggle__thumb"></span>
+          </button>
+          <span class="mode-toggle__label mode-toggle__label--dev">
+            <i class="fas fa-terminal"></i> Dev
+          </span>
+        </div>
+
+        <a href="mailto:luisalejandroilarraza@gmail.com" class="btn btn--primary btn--sm">Contáctame</a>
+
+        <!-- Hamburger mobile -->
+        <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__container">
+        <div class="hero__content">
+
+          <!-- Hero PM -->
+          <div class="hero__text hero__text--pm">
+            <h1 class="hero__title">Transformo operaciones en <span class="text-accent">ventajas competitivas</span></h1>
+            <p class="hero__subtitle">Especialista en automatización con IA + Gestión de proyectos digitales.<br>4+ años liderando proyectos tecnológicos de alto impacto en Venezuela.</p>
+            <div class="hero__badges">
+              <span class="badge">Automatización con IA</span>
+              <span class="badge">Gestión de Proyectos</span>
+              <span class="badge">Power BI</span>
+              <span class="badge">SCRUM</span>
+            </div>
+            <div class="hero__ctas">
+              <a href="#experience" class="btn btn--primary">Ver mi experiencia <i class="fas fa-arrow-right"></i></a>
+              <a href="assets/CV_Luis_Ilarraza.pdf" class="btn btn--outline" download>Descargar CV <i class="fas fa-download"></i></a>
+            </div>
+            <div class="hero__stats">
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="60">0</span><span>%</span>
+                <span class="stat-pill__label">mejora en eficiencia operativa</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="5">0</span>
+                <span class="stat-pill__label">proyectos enterprise</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="4">0</span><span>+</span>
+                <span class="stat-pill__label">años de experiencia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Dev -->
+          <div class="hero__text hero__text--dev">
+            <h1 class="hero__title">Construyo sistemas que <span class="text-accent">trabajan mientras duermes</span></h1>
+            <p class="hero__subtitle">Multi-agent AI systems &bull; Bots conversacionales &bull; Plataformas de automatización<br>Desde Venezuela para el mundo.</p>
+            <div class="hero__badges">
+              <span class="badge">Python</span>
+              <span class="badge">VBA + IA</span>
+              <span class="badge">Multi-Agent</span>
+              <span class="badge">APIs</span>
+              <span class="badge">HTML/CSS/JS</span>
+            </div>
+            <div class="hero__ctas">
+              <a href="#projects" class="btn btn--primary">Ver mis proyectos <i class="fas fa-arrow-right"></i></a>
+              <a href="https://github.com/" class="btn btn--outline" target="_blank" rel="noopener">GitHub <i class="fab fa-github"></i></a>
+            </div>
+            <div class="hero__stats">
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="7">0</span>
+                <span class="stat-pill__label">agentes IA en producción</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="87">0</span><span>%</span>
+                <span class="stat-pill__label">reducción de tiempo</span>
+              </div>
+              <div class="stat-pill">
+                <span class="stat-pill__number" data-target="3">0</span>
+                <span class="stat-pill__label">sistemas enterprise</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foto (compartida) -->
+          <div class="hero__image">
+            <div class="hero__photo-wrapper">
+              <img src="assets/foto_luis.jpg" alt="Luis Ilarraza" class="hero__photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+              <div class="hero__photo-placeholder">
+                <i class="fas fa-user"></i>
+                <span>Foto</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="about section" id="about">
+      <div class="about__container">
+
+        <!-- Sobre Mí PM -->
+        <div class="about__content about__content--pm">
+          <h2 class="section__title">Sobre Mí</h2>
+          <div class="about__grid">
+            <div class="about__text">
+              <p>Soy un especialista en <strong>transformación digital y automatización con IA</strong> con más de 4 años de experiencia liderando proyectos tecnológicos de alto impacto en Venezuela.</p>
+              <p>En <strong>Soluciones Laser C.A.</strong>, empresa líder en facturación digital, lideré un equipo de 5 personas implementando sistemas que redujeron procesos de un mes a 72 horas. Diseñé dashboards de KPIs con Power BI, implementé metodología SCRUM (certificado por Sybven, 36h), gestioné plataformas de documentación digital y coordiné eventos corporativos de 100+ asistentes.</p>
+              <p>Mi enfoque: tomar sistemas caóticos y convertirlos en <strong>máquinas eficientes</strong>. Cada proceso que toco sale corriendo al 100%, para que el equipo se enfoque en lo que realmente importa.</p>
+            </div>
+            <div class="about__highlights">
+              <div class="highlight-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>60%</h3>
+                <p>Mejora en eficiencia operativa</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-users"></i>
+                <h3>5</h3>
+                <p>Personas bajo liderazgo directo</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-bug-slash"></i>
+                <h3>95%</h3>
+                <p>Reducción de errores humanos</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>100+</h3>
+                <p>Asistentes en eventos gestionados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sobre Mí Dev -->
+        <div class="about__content about__content--dev">
+          <h2 class="section__title">Sobre Mí</h2>
+          <div class="about__grid">
+            <div class="about__text">
+              <p>Soy un <strong>desarrollador de sistemas de automatización</strong> que va desde el diseño de flujos conversacionales hasta arquitecturas multi-agente en producción.</p>
+              <p>Construyo soluciones con <strong>IA generativa</strong> (Claude API, ChatGPT API), automatizaciones en VBA generadas con IA, bots con base de datos en tiempo real, y plataformas web fullstack desplegadas en producción. Mi stack va desde Python y PostgreSQL hasta Docker y Ubuntu Server.</p>
+              <p>No solo escribo código — diseño <strong>sistemas completos</strong> que resuelven problemas reales de negocio. Desde un ERP multi-agente con 7 departamentos hasta plataformas de facturación que cumplen normativas fiscales venezolanas.</p>
+            </div>
+            <div class="about__highlights">
+              <div class="highlight-card">
+                <i class="fas fa-robot"></i>
+                <h3>7</h3>
+                <p>Agentes IA especializados en producción</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-clock"></i>
+                <h3>87%</h3>
+                <p>Reducción de tiempo en procesos</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-server"></i>
+                <h3>3</h3>
+                <p>Sistemas enterprise deployados</p>
+              </div>
+              <div class="highlight-card">
+                <i class="fas fa-database"></i>
+                <h3>Dual</h3>
+                <p>PostgreSQL databases en producción</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCIA PM (Timeline) ========== -->
+    <section class="experience section section--pm" id="experience">
+      <div class="experience__container">
+        <h2 class="section__title">Experiencia Profesional</h2>
+
+        <div class="timeline">
+
+          <!-- Entrada 1 -->
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <h3 class="timeline__role">Líder de Innovación 360°</h3>
+                <span class="timeline__date"><i class="fas fa-calendar-alt"></i> Nov 2021 – Ene 2026</span>
+              </div>
+              <p class="timeline__company"><i class="fas fa-building"></i> Soluciones Laser C.A. — Sucre, Venezuela</p>
+              <p class="timeline__desc">Empresa líder en facturación digital (Providencias 121 y 000102 del SENIAT).</p>
+              <ul class="timeline__achievements">
+                <li><i class="fas fa-rocket"></i> Prototipo de sistema de facturación con VBA + IA — redujo trabajo de 1 mes a 72 horas</li>
+                <li><i class="fas fa-robot"></i> Flujos conversacionales inteligentes con integración DB en tiempo real</li>
+                <li><i class="fas fa-chart-bar"></i> Sistema de KPIs con Power BI para monitoreo de operaciones digitales</li>
+                <li><i class="fas fa-globe"></i> Plataformas web HTML/GitHub con Google Sheets API</li>
+                <li><i class="fas fa-brain"></i> Prompt engineering para automatización de procesos tributarios</li>
+                <li><i class="fas fa-users"></i> Liderazgo de plataforma de Gestión Documental Digital (equipo de 5 personas)</li>
+                <li><i class="fas fa-calendar-check"></i> Coordinación de eventos corporativos 100+ asistentes, gestión end-to-end</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Entrada 2 -->
+          <div class="timeline__item fade-in">
+            <div class="timeline__dot"></div>
+            <div class="timeline__card">
+              <div class="timeline__header">
+                <h3 class="timeline__role">Presidente & Fundador</h3>
+                <span class="timeline__date"><i class="fas fa-calendar-alt"></i> Nov 2020 – Nov 2021</span>
+              </div>
+              <p class="timeline__company"><i class="fas fa-landmark"></i> Asociación Civil Juventud Internacional de Desarrollo</p>
+              <ul class="timeline__achievements">
+                <li><i class="fas fa-landmark"></i> Fundación y operación estratégica de la organización</li>
+                <li><i class="fas fa-bolt"></i> 60% mejora en eficiencia operativa mediante gestión digital</li>
+                <li><i class="fas fa-handshake"></i> Alianzas estratégicas con organizaciones clave</li>
+                <li><i class="fas fa-microphone"></i> Representación ante stakeholders gubernamentales y privados</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stack de Herramientas PM -->
+        <div class="tools-stack">
+          <h3 class="tools-stack__title">Stack de Herramientas</h3>
+          <div class="tools-stack__grid">
+            <span class="tool-tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+            <span class="tool-tag"><i class="fas fa-file-excel"></i> Excel Avanzado</span>
+            <span class="tool-tag"><i class="fas fa-tasks"></i> ClickUp</span>
+            <span class="tool-tag"><i class="fab fa-microsoft"></i> Microsoft 365</span>
+            <span class="tool-tag"><i class="fas fa-chart-line"></i> Google Analytics</span>
+            <span class="tool-tag"><i class="fab fa-adobe"></i> Adobe Suite</span>
+            <span class="tool-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="tool-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+            <span class="tool-tag"><i class="fas fa-sync-alt"></i> SCRUM / Agile</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== PROYECTOS DEV (Claude Code style) ========== -->
+    <section class="projects section section--dev" id="projects">
+      <div class="projects__container">
+        <h2 class="section__title">Proyectos</h2>
+
+        <div class="projects__grid">
+
+          <!-- Proyecto 1: SantoniBot -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">santonibot — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--live"><i class="fas fa-circle"></i> En Producción</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project SantoniBot</span>
+              </div>
+              <div class="terminal-output">
+                <p class="terminal-client"><span class="terminal-label">cliente:</span> Alimentos Santoni, C.A.</p>
+                <p>Sistema de consulta ERP multi-agente con 7 departamentos especializados (Ventas, Finanzas, Contabilidad, RRHH, Producción, Compras). Orquestador central que enruta consultas en lenguaje natural a los agentes correctos. Integración con iDempiere y dual PostgreSQL databases.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">Python</span>
+                <span class="terminal-tag">Multi-Agent</span>
+                <span class="terminal-tag">PostgreSQL</span>
+                <span class="terminal-tag">Docker</span>
+                <span class="terminal-tag">Ubuntu Server</span>
+                <span class="terminal-tag">Claude API</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">metrics</span>
+              </div>
+              <div class="terminal-metrics">
+                <span>7 agentes especializados</span>
+                <span>Dual DB</span>
+                <span>Docker deployment</span>
+              </div>
+              <div class="terminal-highlight">
+                <i class="fas fa-quote-left"></i> De Excel a consultas en lenguaje natural en tiempo real
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> main</span>
+              <span><i class="fas fa-check-circle"></i> 7 agents running</span>
+              <span>Python 3.11</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 2: Sistema Axones -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">axones-system — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--dev"><i class="fas fa-circle"></i> En Desarrollo</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project AxonesSystem</span>
+              </div>
+              <div class="terminal-output">
+                <p class="terminal-client"><span class="terminal-label">cliente:</span> Inversiones Axones 2008, C.A.</p>
+                <p>Sistema de automatización de producción industrial. Procesamiento de datasets Excel masivos, digitalización de formularios físicos, módulo de compras integrado, gestión de inventario y producción. Integración con Jira para gestión de tareas.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">Python</span>
+                <span class="terminal-tag">Excel/VBA</span>
+                <span class="terminal-tag">Jira API</span>
+                <span class="terminal-tag">Google Sheets</span>
+                <span class="terminal-tag">Automatización</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">metrics</span>
+              </div>
+              <div class="terminal-metrics">
+                <span>88 tareas en Jira</span>
+                <span>Dataset industrial procesado</span>
+              </div>
+              <div class="terminal-highlight">
+                <i class="fas fa-quote-left"></i> Digitalizando la industria venezolana de manufactura
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> develop</span>
+              <span><i class="fas fa-spinner"></i> in progress</span>
+              <span>Python 3.11</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 3: Bot Conversacional -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">chatbot-ai — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--live"><i class="fas fa-circle"></i> Deployado</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project ChatbotAI</span>
+              </div>
+              <div class="terminal-output">
+                <p class="terminal-client"><span class="terminal-label">año:</span> 2024</p>
+                <p>Sistema de atención automatizada con integración de base de datos en tiempo real. Flujos conversacionales diseñados con IA para respuestas contextuales y personalizadas. Reemplazó atención manual reduciendo tiempos de respuesta drásticamente.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">ChatGPT API</span>
+                <span class="terminal-tag">Google Sheets</span>
+                <span class="terminal-tag">NLP Flows</span>
+                <span class="terminal-tag">JavaScript</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">metrics</span>
+              </div>
+              <div class="terminal-metrics">
+                <span>Respuesta 24/7</span>
+                <span>Integración DB en tiempo real</span>
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> main</span>
+              <span><i class="fas fa-check-circle"></i> deployed</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 4: Facturación Automatizada -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">facturacion-seniat — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--live"><i class="fas fa-circle"></i> En Producción</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project FacturacionSENIAT</span>
+              </div>
+              <div class="terminal-output">
+                <p class="terminal-client"><span class="terminal-label">año:</span> 2023–2024</p>
+                <p>Macros VBA generados con IA para procesamiento masivo de facturas según normativas venezolanas (Providencias 121 y 000102 del SENIAT). Automatización completa del ciclo de facturación fiscal.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">Excel VBA</span>
+                <span class="terminal-tag">ChatGPT</span>
+                <span class="terminal-tag">Claude</span>
+                <span class="terminal-tag">SENIAT</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">metrics</span>
+              </div>
+              <div class="terminal-metrics">
+                <span>87% reducción de tiempo</span>
+                <span>95% menos errores</span>
+              </div>
+              <div class="terminal-highlight">
+                <i class="fas fa-quote-left"></i> 1 mes de trabajo → 72 horas
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> main</span>
+              <span><i class="fas fa-check-circle"></i> production</span>
+              <span>VBA + AI</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 5: Plataformas Web -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">web-dashboards — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--live"><i class="fas fa-circle"></i> En Producción</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project WebDashboards</span>
+              </div>
+              <div class="terminal-output">
+                <p class="terminal-client"><span class="terminal-label">año:</span> 2023–2024</p>
+                <p>Dashboards en tiempo real conectando GitHub Pages con Google Sheets API para visualización de KPIs empresariales. Múltiples proyectos deployados para clientes en producción.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">HTML</span>
+                <span class="terminal-tag">CSS</span>
+                <span class="terminal-tag">JavaScript</span>
+                <span class="terminal-tag">Google Sheets API</span>
+                <span class="terminal-tag">GitHub Pages</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">metrics</span>
+              </div>
+              <div class="terminal-metrics">
+                <span>Múltiples clientes</span>
+                <span>Real-time data sync</span>
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> gh-pages</span>
+              <span><i class="fas fa-check-circle"></i> live</span>
+              <span>Vanilla JS</span>
+            </div>
+          </div>
+
+          <!-- Proyecto 6: Panadería Rústicos -->
+          <div class="terminal-card fade-in">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">rusticos-system — ~/projects</span>
+              <span class="terminal-card__status terminal-card__status--done"><i class="fas fa-check"></i> Completado</span>
+            </div>
+            <div class="terminal-card__body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">describe --project RusticosSystem</span>
+              </div>
+              <div class="terminal-output">
+                <p>Sistema de gestión para panadería artesanal. Módulo de inventario, control de producción y plataforma de pedidos. Solución fullstack adaptada a las necesidades operativas del negocio.</p>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">stack --list</span>
+              </div>
+              <div class="terminal-tags">
+                <span class="terminal-tag">HTML/CSS/JS</span>
+                <span class="terminal-tag">Google Sheets API</span>
+                <span class="terminal-tag">Automatización</span>
+              </div>
+            </div>
+            <div class="terminal-card__statusbar">
+              <span><i class="fas fa-code-branch"></i> main</span>
+              <span><i class="fas fa-check-double"></i> completed</span>
+              <span>Fullstack</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Stack Técnico Dev -->
+        <div class="tech-stack">
+          <h3 class="tech-stack__title"><span class="terminal-prompt">&gt;</span> tech-stack --categorized</h3>
+          <div class="tech-stack__categories">
+            <div class="tech-stack__category">
+              <h4><i class="fas fa-brain"></i> IA & LLMs</h4>
+              <div class="tech-stack__tags">
+                <span class="terminal-tag">Claude API</span>
+                <span class="terminal-tag">ChatGPT API</span>
+                <span class="terminal-tag">Prompt Engineering</span>
+                <span class="terminal-tag">Claude Code</span>
+              </div>
+            </div>
+            <div class="tech-stack__category">
+              <h4><i class="fas fa-cogs"></i> Automatización</h4>
+              <div class="tech-stack__tags">
+                <span class="terminal-tag">Python</span>
+                <span class="terminal-tag">VBA</span>
+                <span class="terminal-tag">n8n</span>
+                <span class="terminal-tag">Multi-Agent</span>
+              </div>
+            </div>
+            <div class="tech-stack__category">
+              <h4><i class="fas fa-database"></i> Data</h4>
+              <div class="tech-stack__tags">
+                <span class="terminal-tag">PostgreSQL</span>
+                <span class="terminal-tag">Google Sheets</span>
+                <span class="terminal-tag">Power BI</span>
+                <span class="terminal-tag">Excel Avanzado</span>
+              </div>
+            </div>
+            <div class="tech-stack__category">
+              <h4><i class="fas fa-code"></i> Web</h4>
+              <div class="tech-stack__tags">
+                <span class="terminal-tag">HTML</span>
+                <span class="terminal-tag">CSS</span>
+                <span class="terminal-tag">JavaScript</span>
+                <span class="terminal-tag">GitHub Pages</span>
+                <span class="terminal-tag">Google Sheets API</span>
+              </div>
+            </div>
+            <div class="tech-stack__category">
+              <h4><i class="fas fa-tools"></i> DevOps / Tools</h4>
+              <div class="tech-stack__tags">
+                <span class="terminal-tag">Docker</span>
+                <span class="terminal-tag">Ubuntu Server</span>
+                <span class="terminal-tag">Git</span>
+                <span class="terminal-tag">Jira API</span>
+                <span class="terminal-tag">ClickUp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== EDUCACIÓN & CERTIFICACIONES ========== -->
+    <section class="education section" id="education">
+      <div class="education__container">
+        <h2 class="section__title">Educación & Certificaciones</h2>
+
+        <div class="education__grid">
+          <div class="education__card fade-in">
+            <div class="education__icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Técnico Superior en Publicidad y Mercadeo</h3>
+            <p class="education__institution">ISUM — Instituto Universitario de Mercadotecnia</p>
+            <span class="education__year">2025</span>
+            <p class="education__detail">Especialización en Estrategias Digitales, Investigación de Mercados, Innovación y Tecnología.</p>
+          </div>
+
+          <div class="education__card fade-in">
+            <div class="education__icon"><i class="fas fa-robot"></i></div>
+            <h3>IA Generativa Corporativa</h3>
+            <p class="education__institution">Intenzia</p>
+            <span class="education__year">2025</span>
+            <p class="education__detail">Curso intensivo — 4 horas.</p>
+          </div>
+
+          <div class="education__card fade-in">
+            <div class="education__icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Marketing con IA</h3>
+            <p class="education__institution">ISUM</p>
+            <span class="education__year">2024</span>
+            <p class="education__detail">Curso intensivo — 8 horas.</p>
+          </div>
+
+          <div class="education__card fade-in">
+            <div class="education__icon"><i class="fas fa-sync-alt"></i></div>
+            <h3>Metodología SCRUM</h3>
+            <p class="education__institution">Sybven</p>
+            <span class="education__year">2023</span>
+            <p class="education__detail">Taller completo — 36 horas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FILOSOFÍA / INTERESES ========== -->
+    <section class="philosophy section" id="philosophy">
+      <div class="philosophy__container">
+
+        <!-- Filosofía PM -->
+        <div class="philosophy__content philosophy__content--pm">
+          <blockquote class="philosophy__quote">
+            <i class="fas fa-quote-left"></i>
+            La tecnología no reemplaza al líder — lo amplifica. Mi trabajo es asegurarme de que cada proceso corra al 100% para que mi equipo pueda enfocarse en lo que realmente importa.
+          </blockquote>
+          <div class="philosophy__interests">
+            <span class="interest-tag"><i class="fas fa-brain"></i> IA & Automatización</span>
+            <span class="interest-tag"><i class="fas fa-microchip"></i> Nuevas Tecnologías</span>
+            <span class="interest-tag"><i class="fas fa-lightbulb"></i> Innovación</span>
+            <span class="interest-tag"><i class="fas fa-gamepad"></i> Gamification</span>
+          </div>
+        </div>
+
+        <!-- Filosofía Dev -->
+        <div class="philosophy__content philosophy__content--dev">
+          <blockquote class="philosophy__quote philosophy__quote--terminal">
+            <span class="terminal-prompt">&gt;</span>
+            Jensen Huang dijo que si tu ingeniero de $500K no gasta $250K en tokens, algo está mal. Estoy en eso.
+          </blockquote>
+          <p class="philosophy__context">Luis usa Claude intensivamente — múltiples sesiones diarias como herramienta central de desarrollo y automatización.</p>
+          <div class="philosophy__interests">
+            <span class="interest-tag"><i class="fas fa-terminal"></i> Claude Code</span>
+            <span class="interest-tag"><i class="fas fa-robot"></i> Multi-Agent Systems</span>
+            <span class="interest-tag"><i class="fas fa-code"></i> Automatización</span>
+            <span class="interest-tag"><i class="fas fa-rocket"></i> Ship Fast</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== FOOTER / CONTACTO ========== -->
+    <footer class="footer" id="contact">
+      <div class="footer__container">
+        <div class="footer__info">
+          <h2 class="footer__name">Luis Alejandro Ilarraza</h2>
+          <p class="footer__title footer__title--pm">Especialista en Automatización con IA & Gestión de Proyectos</p>
+          <p class="footer__title footer__title--dev">Developer — Automatización, Multi-Agent Systems & IA</p>
+        </div>
+
+        <div class="footer__contact">
+          <a href="mailto:luisalejandroilarraza@gmail.com" class="footer__link">
+            <i class="fas fa-envelope"></i> luisalejandroilarraza@gmail.com
+          </a>
+          <a href="tel:+5804124898292" class="footer__link">
+            <i class="fas fa-phone"></i> 04124898292
+          </a>
+          <span class="footer__link">
+            <i class="fas fa-map-marker-alt"></i> El Paraíso, Caracas, Venezuela
+          </span>
+        </div>
+
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="footer__social-link" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+          <a href="#" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2026 Luis Ilarraza. Todos los derechos reservados. Venezuela <span class="flag">&#127483;&#127466;</span></p>
+          <p class="footer__lang">Español (nativo) &bull; Inglés (intermedio)</p>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
