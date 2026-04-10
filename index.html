@@ -17,6 +17,17 @@
 </head>
 <body data-mode="pm">
 
+  <!-- Cursor glow que sigue al mouse -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ========== FONDO ANIMADO ========== -->
+  <div class="bg-effects">
+    <div class="aurora"></div>
+    <div class="aurora aurora--2"></div>
+    <div class="grid-overlay"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
   <!-- ========== HEADER ========== -->
   <header class="header" id="header">
     <div class="header__container">
@@ -74,7 +85,8 @@
 
           <!-- Hero PM -->
           <div class="hero__text hero__text--pm">
-            <h1 class="hero__title">Transformo operaciones en <span class="text-accent">ventajas competitivas</span></h1>
+            <p class="hero__tag">// project manager & innovation</p>
+            <h1 class="hero__title gradient-text">Transformo operaciones en ventajas competitivas</h1>
             <p class="hero__subtitle">Especialista en automatización con IA + Gestión de proyectos digitales.<br>4+ años liderando proyectos tecnológicos de alto impacto en Venezuela.</p>
             <div class="hero__badges">
               <span class="badge">Automatización con IA</span>
@@ -104,7 +116,8 @@
 
           <!-- Hero Dev -->
           <div class="hero__text hero__text--dev">
-            <h1 class="hero__title">Construyo sistemas que <span class="text-accent">trabajan mientras duermes</span></h1>
+            <p class="hero__tag hero__tag--typing"><span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span></p>
+            <h1 class="hero__title gradient-text">Construyo sistemas que trabajan mientras duermes</h1>
             <p class="hero__subtitle">Multi-agent AI systems &bull; Bots conversacionales &bull; Plataformas de automatización<br>Desde Venezuela para el mundo.</p>
             <div class="hero__badges">
               <span class="badge">Python</span>
@@ -698,11 +711,38 @@
 
         <!-- Filosofía Dev -->
         <div class="philosophy__content philosophy__content--dev">
-          <blockquote class="philosophy__quote philosophy__quote--terminal">
-            <span class="terminal-prompt">&gt;</span>
-            Jensen Huang dijo que si tu ingeniero de $500K no gasta $250K en tokens, algo está mal. Estoy en eso.
-          </blockquote>
-          <p class="philosophy__context">Luis usa Claude intensivamente — múltiples sesiones diarias como herramienta central de desarrollo y automatización.</p>
+
+          <!-- Terminal quote block -->
+          <div class="philosophy__terminal">
+            <div class="terminal-card__bar">
+              <div class="terminal-card__dots">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+              </div>
+              <span class="terminal-card__title">filosofia.sh — ~/life</span>
+            </div>
+            <div class="philosophy__terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">quote --source "Jensen Huang"</span>
+              </div>
+              <blockquote class="philosophy__quote philosophy__quote--terminal">
+                "Si tu ingeniero de $500K no gasta $250K en tokens de IA, algo está mal."
+              </blockquote>
+              <div class="philosophy__attribution">
+                <strong>Jensen Huang</strong> — CEO de NVIDIA, la empresa más valiosa del mundo. Pionero de la revolución GPU que hizo posible la IA moderna. Bajo su liderazgo, NVIDIA pasó de fabricar tarjetas gráficas para videojuegos a ser la infraestructura que mueve ChatGPT, Claude y cada modelo de IA del planeta.
+              </div>
+              <div class="terminal-line" style="margin-top: 1rem;">
+                <span class="terminal-prompt">&gt;</span>
+                <span class="terminal-cmd">luis --status</span>
+              </div>
+              <div class="philosophy__my-take">
+                <span class="terminal-label">output:</span> Estoy en eso. Claude es mi copiloto diario — múltiples sesiones, miles de tokens, cero excusas. Si la herramienta más poderosa del mundo está disponible, no usarla al máximo es la verdadera pérdida.
+              </div>
+            </div>
+          </div>
+
           <div class="philosophy__interests">
             <span class="interest-tag"><i class="fas fa-terminal"></i> Claude Code</span>
             <span class="interest-tag"><i class="fas fa-robot"></i> Multi-Agent Systems</span>
