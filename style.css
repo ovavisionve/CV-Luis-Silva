@@ -1434,13 +1434,70 @@ img {
   transition: color var(--transition);
 }
 
-/* Filosofía Dev — estilo terminal */
+/* Filosofía Dev — terminal completo */
+.philosophy__terminal {
+  background: #0d1117;
+  border: 1px solid #21262d;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+.philosophy__terminal:hover {
+  border-color: rgba(var(--accent-rgb), 0.3);
+  box-shadow: 0 12px 40px rgba(var(--accent-rgb), 0.1);
+}
+
+.philosophy__terminal-body {
+  padding: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
 .philosophy__quote--terminal {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 1.05rem;
+  font-style: italic;
   text-align: left;
-  background: #0d1117;
-  border-color: #21262d;
+  background: none;
+  border: none;
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0 1rem 1.25rem;
+  color: #e6edf3;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.philosophy__quote--terminal:hover {
+  box-shadow: none;
+}
+
+.philosophy__attribution {
+  padding-left: 1.25rem;
+  color: #8b949e;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.philosophy__attribution strong {
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+.philosophy__my-take {
+  padding-left: 1.25rem;
+  color: #e6edf3;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.philosophy__my-take .terminal-label {
+  color: var(--accent);
 }
 
 .philosophy__context {
