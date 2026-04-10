@@ -652,20 +652,57 @@ img {
 }
 
 .highlight-card {
-  background: var(--bg-card);
+  background: rgba(var(--accent-rgb), 0.03);
   border: 1px solid var(--border-card);
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
-  transition: all var(--transition);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Borde gradient animado en hover */
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.5), transparent 40%, transparent 60%, rgba(var(--accent-rgb), 0.5));
+  background-size: 300% 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-rotate 4s linear infinite;
+}
+
+@keyframes border-rotate {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+.highlight-card:hover::before {
+  opacity: 1;
+}
+
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 11px;
+  background: var(--bg-primary);
+  z-index: -1;
 }
 
 .highlight-card:hover {
-  border-color: rgba(var(--accent-rgb), 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(var(--accent-rgb), 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(var(--accent-rgb), 0.15), 0 0 20px rgba(var(--accent-rgb), 0.05);
 }
 
 .highlight-card i {
@@ -729,18 +766,37 @@ img {
 }
 
 .timeline__card {
-  background: var(--bg-card);
+  background: rgba(var(--accent-rgb), 0.02);
   border: 1px solid var(--border-card);
   border-radius: 12px;
   padding: 1.75rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all var(--transition);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea de acento arriba de la card */
+.timeline__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(var(--accent-rgb), 0.2));
+  transition: width 0.6s ease;
+}
+
+.timeline__card:hover::before {
+  width: 100%;
 }
 
 .timeline__card:hover {
-  border-color: rgba(var(--accent-rgb), 0.3);
-  box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.25);
+  box-shadow: 0 12px 40px rgba(var(--accent-rgb), 0.1), 0 0 15px rgba(var(--accent-rgb), 0.03);
+  transform: translateX(4px);
 }
 
 .timeline__header {
@@ -869,13 +925,58 @@ img {
   border: 1px solid #21262d;
   border-radius: 10px;
   overflow: hidden;
-  transition: all var(--transition);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Scanline overlay — efecto CRT sutil */
+.terminal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.terminal-card:hover::before {
+  opacity: 1;
+}
+
+/* Glow border en hover */
+.terminal-card::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.4), transparent 30%, transparent 70%, rgba(var(--accent-rgb), 0.4));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.terminal-card:hover::after {
+  opacity: 1;
 }
 
 .terminal-card:hover {
-  border-color: rgba(var(--accent-rgb), 0.4);
-  box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.1);
-  transform: translateY(-4px);
+  border-color: rgba(var(--accent-rgb), 0.3);
+  box-shadow: 0 16px 50px rgba(var(--accent-rgb), 0.15), 0 0 30px rgba(var(--accent-rgb), 0.05);
+  transform: translateY(-6px);
 }
 
 /* Barra de título — estilo ventana de terminal */
@@ -1133,19 +1234,37 @@ img {
 }
 
 .education__card {
-  background: var(--bg-card);
+  background: rgba(var(--accent-rgb), 0.02);
   border: 1px solid var(--border-card);
   border-radius: 12px;
   padding: 1.75rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: all var(--transition);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow lateral en hover */
+.education__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--accent), rgba(var(--accent-rgb), 0.2));
+  transition: height 0.5s ease;
+}
+
+.education__card:hover::before {
+  height: 100%;
 }
 
 .education__card:hover {
-  border-color: rgba(var(--accent-rgb), 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(var(--accent-rgb), 0.08);
+  border-color: rgba(var(--accent-rgb), 0.25);
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(var(--accent-rgb), 0.12), 0 0 15px rgba(var(--accent-rgb), 0.04);
 }
 
 .education__icon {
@@ -1205,13 +1324,21 @@ img {
   color: var(--text-primary);
   line-height: 1.8;
   padding: 2rem;
-  background: var(--bg-card);
+  background: rgba(var(--accent-rgb), 0.03);
   border: 1px solid var(--border-card);
+  border-left: 3px solid var(--accent);
   border-radius: 12px;
   margin-bottom: 1.5rem;
   position: relative;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.06);
+  transition: all 0.4s ease;
+}
+
+.philosophy__quote:hover {
+  box-shadow: 0 12px 40px rgba(var(--accent-rgb), 0.12);
+  border-left-width: 4px;
 }
 
 .philosophy__quote i {
