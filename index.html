@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luis Ilarraza — Portfolio</title>
+  <meta name="description" content="Portfolio profesional de Luis Ilarraza. Especialista en automatización con IA y gestión de proyectos digitales.">
+  <meta property="og:title" content="Luis Ilarraza — Portfolio">
+  <meta property="og:description" content="Automatización con IA + Gestión de Proyectos Digitales">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-mode="pm">
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">Luis Ilarraza</a>
+
+      <nav class="header__nav" id="nav">
+        <!-- PM Nav -->
+        <ul class="nav__list nav__list--pm">
+          <li><a href="#hero" class="nav__link">Inicio</a></li>
+          <li><a href="#about" class="nav__link">Sobre Mí</a></li>
+          <li><a href="#experience" class="nav__link">Experiencia</a></li>
+          <li><a href="#education" class="nav__link">Educación</a></li>
+          <li><a href="#contact" class="nav__link">Contacto</a></li>
+        </ul>
+        <!-- Dev Nav -->
+        <ul class="nav__list nav__list--dev">
+          <li><a href="#hero" class="nav__link">Inicio</a></li>
+          <li><a href="#about" class="nav__link">Sobre Mí</a></li>
+          <li><a href="#projects" class="nav__link">Proyectos</a></li>
+          <li><a href="#education" class="nav__link">Educación</a></li>
+          <li><a href="#contact" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <!-- Toggle de modo -->
+        <div class="mode-toggle" id="modeToggle">
+          <span class="mode-toggle__label mode-toggle__label--pm">
+            <i class="fas fa-chart-bar"></i> PM
+          </span>
+          <button class="mode-toggle__switch" id="toggleSwitch" aria-label="Cambiar entre modo Project Manager y Developer">
+            <span class="mode-toggle__thumb"></span>
+          </button>
+          <span class="mode-toggle__label mode-toggle__label--dev">
+            <i class="fas fa-terminal"></i> Dev
+          </span>
+        </div>
+
+        <a href="mailto:luisalejandroilarraza@gmail.com" class="btn btn--primary btn--sm">Contáctame</a>
+
+        <!-- Hamburger mobile -->
+        <button class="header__hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Secciones se agregarán en fases siguientes -->
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
