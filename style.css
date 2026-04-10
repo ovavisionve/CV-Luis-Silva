@@ -59,6 +59,32 @@ body {
 }
 
 /* ============================================
+   CURSOR GLOW — sigue al mouse
+   ============================================ */
+.cursor-glow {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(var(--accent-rgb), 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: background 0.8s ease, opacity 0.3s ease;
+  opacity: 0;
+  will-change: left, top;
+}
+
+.cursor-glow.active {
+  opacity: 1;
+}
+
+/* Ocultar cursor glow en mobile */
+@media (max-width: 768px) {
+  .cursor-glow { display: none; }
+}
+
+/* ============================================
    FONDO ANIMADO — Aurora + Grid + Partículas
    ============================================ */
 .bg-effects {
@@ -351,7 +377,13 @@ img {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-card);
-  transition: background var(--transition);
+  transition: all 0.4s ease;
+}
+
+.header--scrolled {
+  background: rgba(10, 14, 26, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom-color: rgba(var(--accent-rgb), 0.1);
 }
 
 .header__container {
@@ -367,6 +399,12 @@ img {
   font-weight: 700;
   color: var(--text-primary);
   white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.header__logo:hover {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(var(--accent-rgb), 0.3);
 }
 
 .header__nav .nav__list {
@@ -398,6 +436,14 @@ img {
 }
 
 .nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link--active {
+  color: var(--accent);
+}
+
+.nav__link--active::after {
   width: 100%;
 }
 
@@ -994,6 +1040,7 @@ img {
   border-color: rgba(var(--accent-rgb), 0.4);
   background: rgba(var(--accent-rgb), 0.08);
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.1);
 }
 
 /* ============================================

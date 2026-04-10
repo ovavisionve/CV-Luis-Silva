@@ -282,10 +282,71 @@
     type();
   }
 
+  // ---- CURSOR GLOW (desktop only) ----
+  function initCursorGlow() {
+    var glow = document.getElementById('cursorGlow');
+    if (!glow) return;
+    // Only on non-touch devices
+    if (window.matchMedia('(max-width: 768px)').matches) return;
+
+    var mouseX = 0;
+    var mouseY = 0;
+    var glowX = 0;
+    var glowY = 0;
+
+    document.addEventListener('mousemove', function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!glow.classList.contains('active')) {
+        glow.classList.add('active');
+      }
+    });
+
+    document.addEventListener('mouseleave', function () {
+      glow.classList.remove('active');
+    });
+
+    // Smooth follow with lerp
+    function updateGlow() {
+      glowX += (mouseX - glowX) * 0.1;
+      glowY += (mouseY - glowY) * 0.1;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      requestAnimationFrame(updateGlow);
+    }
+
+    updateGlow();
+  }
+
+  // ---- NAV ACTIVE LINK on scroll ----
+  function initActiveNav() {
+    var sections = document.querySelectorAll('section[id]');
+    if (!sections.length) return;
+
+    window.addEventListener('scroll', function () {
+      var scrollY = window.pageYOffset + 120;
+      sections.forEach(function (section) {
+        var top = section.offsetTop;
+        var height = section.offsetHeight;
+        var id = section.getAttribute('id');
+        var links = document.querySelectorAll('.nav__link[href="#' + id + '"]');
+        links.forEach(function (link) {
+          if (scrollY >= top && scrollY < top + height) {
+            link.classList.add('nav__link--active');
+          } else {
+            link.classList.remove('nav__link--active');
+          }
+        });
+      });
+    }, { passive: true });
+  }
+
   // ---- INIT ----
   initFadeIn();
   initCounters();
   initParticles();
+  initCursorGlow();
+  initActiveNav();
   // Start typing if in dev mode on load
   if (body.getAttribute('data-mode') === 'dev') {
     initTyping();
