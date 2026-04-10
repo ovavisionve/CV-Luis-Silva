@@ -31,8 +31,11 @@
   toggleSwitch.addEventListener('click', function () {
     var current = body.getAttribute('data-mode');
     setMode(current === 'pm' ? 'dev' : 'pm');
-    // Re-trigger counters for the new mode's visible stats
+    // Re-trigger counters and typing for the new mode
     initCounters();
+    if (body.getAttribute('data-mode') === 'dev') {
+      initTyping();
+    }
   });
 
   // ---- HAMBURGER MENU ----
@@ -227,9 +230,65 @@
     animate();
   }
 
+  // ---- TYPING ANIMATION (Dev hero) ----
+  var typingLines = [
+    '> claude --init portfolio',
+    '> deploying multi-agent systems...',
+    '> python automate.py --all',
+    '> building the future with AI',
+    '> from Venezuela to the world'
+  ];
+  var typingEl = document.getElementById('typingText');
+  var typingTimeout = null;
+
+  function initTyping() {
+    if (!typingEl) return;
+    // Clear any running animation
+    if (typingTimeout) clearTimeout(typingTimeout);
+    typingEl.textContent = '';
+
+    var lineIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+
+    function type() {
+      var currentLine = typingLines[lineIndex];
+
+      if (!deleting) {
+        typingEl.textContent = currentLine.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentLine.length) {
+          // Pause before deleting
+          typingTimeout = setTimeout(function () {
+            deleting = true;
+            type();
+          }, 2000);
+          return;
+        }
+        typingTimeout = setTimeout(type, 60);
+      } else {
+        typingEl.textContent = currentLine.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          lineIndex = (lineIndex + 1) % typingLines.length;
+          typingTimeout = setTimeout(type, 400);
+          return;
+        }
+        typingTimeout = setTimeout(type, 30);
+      }
+    }
+
+    type();
+  }
+
   // ---- INIT ----
   initFadeIn();
   initCounters();
   initParticles();
+  // Start typing if in dev mode on load
+  if (body.getAttribute('data-mode') === 'dev') {
+    initTyping();
+  }
 
 })();
