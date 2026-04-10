@@ -119,31 +119,35 @@ img {
 }
 
 /* Visibilidad de modos */
-.nav__list--dev,
+.header__nav .nav__list--dev,
 .hero__text--dev,
 .about__content--dev,
 .section--dev,
 .philosophy__content--dev,
 .footer__title--dev {
-  display: none;
+  display: none !important;
 }
 
-[data-mode="dev"] .nav__list--pm,
+[data-mode="dev"] .header__nav .nav__list--pm,
 [data-mode="dev"] .hero__text--pm,
 [data-mode="dev"] .about__content--pm,
 [data-mode="dev"] .section--pm,
 [data-mode="dev"] .philosophy__content--pm,
 [data-mode="dev"] .footer__title--pm {
-  display: none;
+  display: none !important;
 }
 
-[data-mode="dev"] .nav__list--dev,
+[data-mode="dev"] .header__nav .nav__list--dev,
 [data-mode="dev"] .hero__text--dev,
 [data-mode="dev"] .about__content--dev,
 [data-mode="dev"] .section--dev,
 [data-mode="dev"] .philosophy__content--dev,
 [data-mode="dev"] .footer__title--dev {
-  display: block;
+  display: block !important;
+}
+
+[data-mode="dev"] .header__nav .nav__list--dev {
+  display: flex !important;
 }
 
 /* Fade-in animación */
